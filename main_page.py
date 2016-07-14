@@ -17,8 +17,11 @@ def index():
 def dota_index():
     if request.method == 'POST':
         id = request.form['dota_id']
+        #if isinstance(id, int):
         return render_template("dotaloading.html", id = id)
-    return render_template("dotaindex.html")
+        #else:
+        #    return render_template("dotaindex.html", error="input")
+    return render_template("dotaindex.html", error=None)
 
 
 @app.route("/dotaanalysis/<int:account_id>")
@@ -26,9 +29,9 @@ def dota_analysis(account_id):
     try:
         player = player_data(api.get_player_summaries(account_id), account_id)
         player.generate_statement()
-        return render_template("dotaresults.html", player=player, loading=False)
-    except api.APIError:
-        return render_template("dotaindex.html", error="API")
+        return render_template("dotaresults.html", player=player)
+    except:
+        return render_template("dotaindex.html", error=True)
 
 
 @app.route("/aboutme")

@@ -1,3 +1,3 @@
 from dota_analysis import *
 
-print "hello", get_player_name(1)
+print "hello", get_player_name(90523242)

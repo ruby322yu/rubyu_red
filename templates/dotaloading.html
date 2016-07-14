@@ -20,6 +20,7 @@ Released   : 20140215
 <script src="https://use.fontawesome.com/2ab1e7374a.js"></script>
 <link href={{url_for('static', filename='default.css')}} rel="stylesheet" type="text/css" media="all" />
 <link href={{url_for('static', filename='fonts.css')}} rel="stylesheet" type="text/css" media="all" />
+<style> body{background-image:url({{url_for('static', filename='images/dota_index_bg.jpg')}}); background-size:cover} </style>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
         <script>
             $(function () { 
@@ -31,7 +32,7 @@ Released   : 20140215
 </head>
     <body>
         <div id="welcome">
-			<i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i><span class="sr-only">Loading...</span>
-		</div>
+	        <i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i><span class="sr-only">Loading...</span>
+	</div>
     </body>
 </html>

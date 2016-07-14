@@ -20,7 +20,7 @@ Released   : 20140215
 <script src="https://use.fontawesome.com/2ab1e7374a.js"></script>
 <link href={{url_for('static', filename='default.css')}} rel="stylesheet" type="text/css" media="all" />
 <link href={{url_for('static', filename='fonts.css')}} rel="stylesheet" type="text/css" media="all" />
-
+<style> body{background-image:url({{url_for('static', filename="images/dota_index_bg.jpg")}}); background-size:cover} </style>
 <!--[if IE 6]><link href="default_ie6.css" rel="stylesheet" type="text/css" /><![endif]-->
 
 </head>
@@ -33,8 +33,8 @@ Released   : 20140215
 			<div id="menu">
 				<ul>
 					<li><a href="/" accesskey="1" title="">Homepage</a></li>
-					<li class="active"><a href="/aboutme" accesskey="2" title="">About me</a></li>
-					<li><a href="/dotaanalysis" accesskey="3" title="">Dota Analyser</a></li>
+					<li><a href="/aboutme" accesskey="2" title="">About me</a></li>
+					<li class="active"><a href="/dotaanalysis" accesskey="3" title="">Dota Analyser</a></li>
 					<li><a href="/myresume" accesskey="4" title="">My Resume</a></li>
 				</ul>
 			</div>
@@ -42,10 +42,13 @@ Released   : 20140215
 	</div>
 </div>
 <div id="welcome">
-	<form action="/dotaanalysis" method="post">
-  		<input type="text" name="dota_id"></input>
-  		<input type="submit" value="Analyse me"></input>
+	{% if error %}
+	<h3>Oops, something has gone wrong, it could be that the dota ID is invalid, or the dota API server is busy</h3>
+	{% endif%}
+	<form action="/dotaanalysis" method="post" id="form1">
+  		<input type="number" name="dota_id" placeholder="Enter your Dota ID" required></input>
 	</form>	
+	<button type="submit" form="form1" value="Submit">Analyse me</button>
 	
 </div>
 	
