@@ -1,0 +1,94 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by TEMPLATED
+http://templated.co
+Released for free under the Creative Commons Attribution License
+
+Name       : EarthyBlue 
+Description: A two-column, fixed-width design with dark color scheme.
+Version    : 1.0
+Released   : 20140215
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900|Quicksand:400,700|Questrial" rel="stylesheet" />
+<script src="https://use.fontawesome.com/2ab1e7374a.js"></script>
+<link href={{url_for('static', filename='default.css')}} rel="stylesheet" type="text/css" media="all" />
+<link href={{url_for('static', filename='fonts.css')}} rel="stylesheet" type="text/css" media="all" />
+
+<!--[if IE 6]><link href="default_ie6.css" rel="stylesheet" type="text/css" /><![endif]-->
+
+</head>
+<body>
+<div id="header-wrapper">
+	<div id="header" class="container">
+		<div id="logo">
+			<h1><a href="#">Ruby(u).Red</a></h1>
+			<div id="menu">
+				<ul>
+					<li><a href="/" accesskey="1" title="">Homepage</a></li>
+					<li class="active"><a href="/aboutme" accesskey="2" title="">About me</a></li>
+					<li><a href="/dotaanalysis" accesskey="3" title="">Dota Analyser</a></li>
+					<li><a href="/myresume" accesskey="4" title="">My Resume</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+<div id="page-wrapper">
+	<div id="welcome" class="container">
+		<div class="h2">
+			<h2>About Me</h2>
+		</div>
+		<img src={{url_for('static', filename='images/me.jpg')}} class="image image-left" alt="" height="250" width="220"/>
+		<p> My name is Ruby Yu, and I am a 2nd year Computer Science student at UNSW (University of New South Wales). My hobbies include coding, drawing, sewing and video games. </p>
+		<p> I hope to someday become a back-end developer (possibly specialising in machine learning/ data mining)</p>
+		<p> "How am I supposed to major in Artificial Intelligence, when I barely have any intelligence of my own?" </p>
+		
+	</div>
+</div>
+<div class="wrapper">
+	<div id="three-column" class="container">
+		<div class="column1">
+			<div class="box"> <a href="#"><img src={{url_for('static', filename='images/scr01.jpg')}} alt="" class="image image-full" /></a>
+				<h3>Coding</h3>
+				<p>This website was built using the Flask micro-framework for python, you can see the code for it on my github repository. Other than that I'll save the formalities for my CV page</p>
+				<a href="#" target="_blank" class="button button-small">My Github</a> </div>
+		</div>
+		<div class="column2">
+			<div class="box"> <a href="#"><img src={{url_for('static', filename='images/drawing.jpg')}} alt="" class="image image-full" /></a>
+				<h3>Drawing</h3>
+				<p>I used to do a lot of digital art, as well as work with traditional mediums such as soft pastels. Here's a link to some of my old works on an ancient deviantart account I've had since I was 12</p>
+				<a href="http://glacyroserade.deviantart.com/" target="_blank" class="button button-small">My Deviantart</a> </div>
+		</div>
+		<div class="column3">
+			<div class="box"> <a href="#"><img src={{url_for('static', filename='images/gaming.jpg')}} alt="" class="image image-full" /></a>
+				<h3>Video games</h3>
+				<p>These days the main video games I play are Dota 2, Hearthstone, Warcraft 3 and WoW. I've tried to do some casual Dota 2 casting as well but I think a future in esports is not for me.</p>
+				<a href="http://steamcommunity.com/id/scar-l-et/"  target="_blank" class="button button-small">My Steam Profile</a> </div>
+		</div>
+		<div class="column4">
+			<div class="box"> <a href="#"><img src={{url_for('static', filename='images/scr04.jpg')}} alt="" class="image image-full" /></a>
+				<h3>Dota</h3>
+				<p>I'm currently the president of the UNSW Dota Society as I like to hold tournaments for the community. I also admin for DotaRoo, an Australian based Dota Community</p>
+				<a href="http://www.dotaroo.com.au/" target="_blank" class="button button-small">DotaRoo Website</a> </div>
+		</div>
+	</div>
+</div>
+<div id="copyright" class="container">
+	<p>&copy; <a href="/">Rubyu.Red.</a> All rights reserved. | CSS sourced from <a href="http://templated.co" rel="nofollow">TEMPLATED</a>.</p>
+		<ul class="contact">
+			<li><a href="http://steamcommunity.com/id/scar-l-et/" target="_blank"><i class="fa fa-steam-square fa-2x" aria-hidden="true"></i></a></li>
+			<li><a href="https://www.facebook.com/ruby.yu.1447" target="_blank"><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></a></li>
+			<li><a href="https://au.linkedin.com/in/ruby-yu-2783b1103" target="_blank"><i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i></a></li>
+			<li><a href="https://github.com/rubyvyu" target="_blank"><i class="fa fa-github fa-2x" aria-hidden="true"></i></a></li>
+			<li><a href="https://www.youtube.com/watch?v=1ECFzfGfIzU" target="_blank"><i class="fa fa-youtube-square fa-2x" aria-hidden="true"></i></a></li>
+		</ul>
+</div>
+</body>
+</html>

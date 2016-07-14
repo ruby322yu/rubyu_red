@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by TEMPLATED
+http://templated.co
+Released for free under the Creative Commons Attribution License
+
+Name       : EarthyBlue 
+Description: A two-column, fixed-width design with dark color scheme.
+Version    : 1.0
+Released   : 20140215
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900|Quicksand:400,700|Questrial" rel="stylesheet" />
+<script src="https://use.fontawesome.com/2ab1e7374a.js"></script>
+<link href={{url_for('static', filename='default.css')}} rel="stylesheet" type="text/css" media="all" />
+<link href={{url_for('static', filename='fonts.css')}} rel="stylesheet" type="text/css" media="all" />
+<style> body{background-image:url({{url_for('static', filename=player.bg_image)}}); background-size:cover} </style>
+<!--[if IE 6]><link href="default_ie6.css" rel="stylesheet" type="text/css" /><![endif]-->
+
+</head>
+
+<body>
+<div id="content">
+	<img src="{{player.avatar}}" class="image image-left" />
+	<h2> {{player.name}} : {{player.playertype}}</h2>
+	<p> {{player.playertype_desc}}</p>
+	<p> {{player.playerdesc}}</p>
+	<h3> Your playstyle breakdown</h3>
+	<ul class="bargraph">
+		<li class="reddeep" style="width:{{player.profile_type_stats[0][1]}}%">{{player.profile_type_stats[0][0]}}</li>
+		<li class="redpink" style="width:{{player.profile_type_stats[1][1]}}%">{{player.profile_type_stats[1][0]}}</li>
+		<li class="pink" style="width:{{player.profile_type_stats[2][1]}}%">{{player.profile_type_stats[2][0]}}</li>
+		<li class="orangered" style="width:{{player.profile_type_stats[3][1]}}%">{{player.profile_type_stats[3][0]}}</li>
+		<li class="orange" style="width:{{player.profile_type_stats[4][1]}}%">{{player.profile_type_stats[4][0]}}</li>
+	</ul>
+	
+</div>
+	
+<div id="copyright" class="container">
+	<p>&copy; <a href="/">Rubyu.Red.</a> All rights reserved. | CSS sourced from <a href="http://templated.co" rel="nofollow">TEMPLATED</a>.</p>
+		<ul class="contact">
+			<li><a href="http://steamcommunity.com/id/scar-l-et/" target="_blank"><i class="fa fa-steam-square fa-2x" aria-hidden="true"></i></a></li>
+			<li><a href="https://www.facebook.com/ruby.yu.1447" target="_blank"><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></a></li>
+			<li><a href="https://au.linkedin.com/in/ruby-yu-2783b1103" target="_blank"><i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i></a></li>
+			<li><a href="https://github.com/rubyvyu" target="_blank"><i class="fa fa-github fa-2x" aria-hidden="true"></i></a></li>
+			<li><a href="https://www.youtube.com/watch?v=1ECFzfGfIzU" target="_blank"><i class="fa fa-youtube-square fa-2x" aria-hidden="true"></i></a></li>
+		</ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by TEMPLATED
+http://templated.co
+Released for free under the Creative Commons Attribution License
+
+Name       : EarthyBlue 
+Description: A two-column, fixed-width design with dark color scheme.
+Version    : 1.0
+Released   : 20140215
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900|Quicksand:400,700|Questrial" rel="stylesheet" />
+<link href={{url_for('static', filename='default.css')}} rel="stylesheet" type="text/css" media="all" />
+<link href={{url_for('static', filename='fonts.css')}} rel="stylesheet" type="text/css" media="all" />
+
+<!--[if IE 6]><link href="default_ie6.css" rel="stylesheet" type="text/css" /><![endif]-->
+
+</head>
+<body>
+<div id="header-wrapper">
+	<div id="header" class="container">
+		<div id="logo">
+			<h1><a href="#">Ruby(u).Red</a></h1>
+			<div id="menu">
+				<ul>
+					<li class="active"><a href="#" accesskey="1" title="">Homepage</a></li>
+					<li><a href="/aboutme" accesskey="2" title="">About me</a></li>
+					<li><a href="/dotaanalysis" accesskey="3" title="">Dota Analyser</a></li>
+					<li><a href="/mycv" accesskey="4" title="">My CV</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+<div id="page-wrapper">
+	<div id="welcome" class="container">
+		<div class="title">
+			<h2>Error {{error_code}}</h2>
+		</div>
+		{% if error_code==404 %}
+			<p>404 Not Found, did you enter an incorrect url? </p>
+		{% else %}
+			<p>501 Internal Server Error, some logic error probably persists in the code, if you know Ruby personally, feel free to tell her this happened, and include a description of what had caused this to happen</p>
+		{% endif %}
+		<p> Meanwhile have this picture of a kitty </p>
+		<img src={{url_for('static', filename='images/cat-banner.jpg')}} class="image image-full" alt="" />
+	</div>
+</div>
+
+<div id="copyright" class="container">
+	<p>&copy;  <a href="#">Rubyu.Red.</a>. All rights reserved. | CSS sourced from <a href="http://templated.co" rel="nofollow">TEMPLATED</a>.</p>
+		<ul class="contact">
+			<li><a href="http://steamcommunity.com/id/scar-l-et/" target="_blank"><i class="fa fa-steam-square fa-2x" aria-hidden="true"></i></a></li>
+			<li><a href="https://www.facebook.com/ruby.yu.1447" target="_blank"><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></a></li>
+			<li><a href="https://au.linkedin.com/in/ruby-yu-2783b1103" target="_blank"><i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i></a></li>
+			<li><a href="https://github.com/rubyvyu" target="_blank"><i class="fa fa-github fa-2x" aria-hidden="true"></i></a></li>
+			<li><a href="https://www.youtube.com/watch?v=1ECFzfGfIzU" target="_blank"><i class="fa fa-youtube-square fa-2x" aria-hidden="true"></i></a></li>
+		</ul>
+</div>
+</body>
+</html>
