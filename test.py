@@ -1,3 +1,4 @@
 from dota_analysis import *
 
-print "hello", get_player_name(90523242)
+player = player_data(api.get_player_summaries(73853498), 73853498)
+player.generate_statement()

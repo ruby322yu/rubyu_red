@@ -1,6 +1,11 @@
+# old code, used for experimentation, some of it has been re-implemented in dota_analysis.py
+
+# don't try to read this, its not helpful
+
 import dota2api
 import operator
 api = dota2api.Initialise("10EB43DE283098AEBC83B0054CFA2A34")
+
 
 class all_hero_matchup:
     def __init__(self, id):

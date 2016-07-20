@@ -1732,6 +1732,4 @@ for (id,hero) in hero_stats.iteritems():
         else:
             hero_stat_total[key]+= value
 
-print hero_stat_total
-
 

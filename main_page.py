@@ -4,8 +4,6 @@ from flask import render_template
 from flask import request
 from dota_analysis import *
 
-FLASK_DEBUG=1
-
 
 app = Flask(__name__)
 
@@ -17,10 +15,7 @@ def index():
 def dota_index():
     if request.method == 'POST':
         id = request.form['dota_id']
-        #if isinstance(id, int):
         return render_template("dotaloading.html", id = id)
-        #else:
-        #    return render_template("dotaindex.html", error="input")
     return render_template("dotaindex.html", error=None)
 
 

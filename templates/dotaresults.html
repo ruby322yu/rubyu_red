@@ -31,7 +31,7 @@ Released   : 20140215
 	<h2> {{player.name}} : {{player.playertype}}</h2>
 	<p> {{player.playertype_desc}}</p>
 	<p> {{player.playerdesc}}</p>
-	<h3> Your playstyle breakdown</h3>
+	<h4> Your playstyle breakdown</h4>
 	<ul class="bargraph">
 		<li class="reddeep" style="width:{{player.profile_type_stats[0][1]}}%">{{player.profile_type_stats[0][0]}}</li>
 		<li class="redpink" style="width:{{player.profile_type_stats[1][1]}}%">{{player.profile_type_stats[1][0]}}</li>
@@ -39,14 +39,29 @@ Released   : 20140215
 		<li class="orangered" style="width:{{player.profile_type_stats[3][1]}}%">{{player.profile_type_stats[3][0]}}</li>
 		<li class="orange" style="width:{{player.profile_type_stats[4][1]}}%">{{player.profile_type_stats[4][0]}}</li>
 	</ul>
-	
+		<img src="{{player.fav_hero_image}}" class='image image-left'/>
+		<h2> Your favourite hero: {{player.fav_hero_name}}</h2>
+		<p> based on your last 100 matches with this hero, you win the most when your teammates play: </p>
+		<table style="float:right;width:60%;">
+		  <tr>
+			<th><img src="{{player.hero_matchup_image[0]}}"/></th>
+			<th><img src="{{player.hero_matchup_image[1]}}"/></th>
+			<th><img src="{{player.hero_matchup_image[2]}}"/></th>
+		  </tr>
+		  <tr>
+			<td>{{player.fav_hero_matchup.win_rates[0][1]}}% win rate</td>
+			<td>{{player.fav_hero_matchup.win_rates[1][1]}}% win rate</td>
+			<td>{{player.fav_hero_matchup.win_rates[2][1]}}% win rate</td>
+		  </tr>
+		</table>
+
 </div>
 	
 <div id="copyright" class="container">
 	<p>&copy; <a href="/">Rubyu.Red.</a> All rights reserved. | CSS sourced from <a href="http://templated.co" rel="nofollow">TEMPLATED</a>.</p>
 		<ul class="contact">
-			<li><a href="http://steamcommunity.com/id/scar-l-et/" target="_blank"><i class="fa fa-steam-square fa-2x" aria-hidden="true"></i></a></li>
-			<li><a href="https://www.facebook.com/ruby.yu.1447" target="_blank"><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></a></li>
+			<li><a href="http://steamcommunity.com/id/scar-l-et/" target="_blank"><i class="fa fa-steam-square fa-2x" aria-hidden="true"></i></a>			 </li>
+			<li><a href="https://www.facebook.com/ruby.yu.1447" target="_blank"><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></a>			  </li>
 			<li><a href="https://au.linkedin.com/in/ruby-yu-2783b1103" target="_blank"><i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i></a></li>
 			<li><a href="https://github.com/rubyvyu" target="_blank"><i class="fa fa-github fa-2x" aria-hidden="true"></i></a></li>
 			<li><a href="https://www.youtube.com/watch?v=1ECFzfGfIzU" target="_blank"><i class="fa fa-youtube-square fa-2x" aria-hidden="true"></i></a></li>
