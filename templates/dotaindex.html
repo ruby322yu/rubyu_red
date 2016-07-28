@@ -13,7 +13,7 @@ Released   : 20140215
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title></title>
+<title>Dotafy me!</title>
 <meta name="keywords" content="" />
 <meta name="description" content="" />
 <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900|Quicksand:400,700|Questrial" rel="stylesheet" />
@@ -34,7 +34,7 @@ Released   : 20140215
 				<ul>
 					<li><a href="/" accesskey="1" title="">Homepage</a></li>
 					<li><a href="/aboutme" accesskey="2" title="">About me</a></li>
-					<li class="active"><a href="/dotaanalysis" accesskey="3" title="">Dota Analyser</a></li>
+					<li class='active'><a href="/dotafyme" accesskey="3" title="">Dota-fy me!</a></li>
 					<li><a href="/myresume" accesskey="4" title="">My Resume</a></li>
 				</ul>
 			</div>
@@ -42,13 +42,18 @@ Released   : 20140215
 	</div>
 </div>
 <div id="welcome">
+	
 	{% if error %}
 	<h3>Oops, something has gone wrong, it could be that the dota ID is invalid, or the dota API server is busy</h3>
+	{% else %}
+	<div id="content" style="width:auto">
+	<h3>See my analysis of your profile, including profile architypes (are you a carry, support or in-between), along with what heroes your favourite hero synergizes with when you play it</h3>
+	</div>
 	{% endif%}
-	<form action="/dotaanalysis" method="post" id="form1">
+	<form action="/dotafyme" method="post" id="form1">
   		<input type="number" name="dota_id" placeholder="Enter your Dota ID" required></input>
 	</form>	
-	<button type="submit" form="form1" value="Submit">Analyse me</button>
+	<button type="submit" form="form1" value="Submit">Dota-fy me!</button>
 	
 </div>
 	

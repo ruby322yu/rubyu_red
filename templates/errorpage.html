@@ -13,7 +13,7 @@ Released   : 20140215
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title></title>
+<title>Ruby(u).Red - Error</title>
 <meta name="keywords" content="" />
 <meta name="description" content="" />
 <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900|Quicksand:400,700|Questrial" rel="stylesheet" />
@@ -32,7 +32,7 @@ Released   : 20140215
 				<ul>
 					<li><a href="/" accesskey="1" title="">Homepage</a></li>
 					<li><a href="/aboutme" accesskey="2" title="">About me</a></li>
-					<li><a href="/dotaanalysis" accesskey="3" title="">Dota Analyser</a></li>
+					<li><a href="/dotafyme" accesskey="3" title="">Dota-fy me!</a></li>
 					<li><a href="/myresume" accesskey="4" title="">My Resume</a></li>
 				</ul>
 			</div>
@@ -45,9 +45,9 @@ Released   : 20140215
 			<h2>Error {{error_code}}</h2>
 		</div>
 		{% if error_code==404 %}
-			<p>404 Not Found, did you enter an incorrect url? </p>
+			<p>Oops, 404 Not Found, did you enter an incorrect url? </p>
 		{% else %}
-			<p>501 Internal Server Error, some logic error probably persists in the code, if you know Ruby personally, feel free to tell her this happened, and include a description of what had caused this to happen</p>
+			<p>Opps, 501 Internal Server Error, some logic error probably persists in the code, if you know Ruby personally, feel free to tell her this happened, and include a description of what had caused this to happen</p>
 		{% endif %}
 		<p> Meanwhile have this picture of a kitty </p>
 		<img src={{url_for('static', filename='images/cat-banner.jpg')}} class="image image-full" alt="" />

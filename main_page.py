@@ -11,7 +11,7 @@ app = Flask(__name__)
 def index():
     return render_template("index.html")
 
-@app.route("/dotaanalysis", methods=['GET', 'POST'])
+@app.route("/dotafyme", methods=['GET', 'POST'])
 def dota_index():
     if request.method == 'POST':
         id = request.form['dota_id']
@@ -19,7 +19,7 @@ def dota_index():
     return render_template("dotaindex.html", error=None)
 
 
-@app.route("/dotaanalysis/<int:account_id>")
+@app.route("/dotafyme/<int:account_id>")
 def dota_analysis(account_id):
     try:
         player = player_data(api.get_player_summaries(account_id), account_id)
