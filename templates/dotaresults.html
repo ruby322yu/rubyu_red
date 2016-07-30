@@ -41,20 +41,7 @@ Released   : 20140215
 	</ul>
 		<img src="{{player.fav_hero_image}}" class='image image-left'/>
 		<h2> Your favourite hero: {{player.fav_hero_name}}</h2>
-		<p> based on your last 100 matches with this hero, you win the most when your teammates play: </p>
-		<table style="float:right;width:60%;">
-		  <tr>
-			<th><img src="{{player.hero_matchup_image[0]}}"/></th>
-			<th><img src="{{player.hero_matchup_image[1]}}"/></th>
-			<th><img src="{{player.hero_matchup_image[2]}}"/></th>
-		  </tr>
-		  <tr>
-			<td>{{player.fav_hero_matchup.win_rates[0][1]}}% win rate</td>
-			<td>{{player.fav_hero_matchup.win_rates[1][1]}}% win rate</td>
-			<td>{{player.fav_hero_matchup.win_rates[2][1]}}% win rate</td>
-		  </tr>
-		</table>
-
+		<p> Pick rate: {{player.fav_hero_rate}}%</p>
 </div>
 	
 <div id="copyright" class="container">

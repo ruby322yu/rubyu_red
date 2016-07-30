@@ -127,7 +127,9 @@ class player_data:
         self.fav_hero = self.hero_freq[0][0]
         self.profile = sorted(self.profile.items(), key=operator.itemgetter(1), reverse=True)
         self.fav_hero_matchup = hero_matchup(self.fav_hero)
-        self.calc_hero_synergy()
+        self.fav_hero_rate = (self.hero_freq[0][1]/5)
+        print self.fav_hero_rate
+        #self.calc_hero_synergy()
 
     # generates text based on player's playstyle analysis
     def generate_statement(self):
@@ -171,8 +173,10 @@ class player_data:
 
     # calculates hero synergies
     def calc_hero_synergy(self):
+
         match_hist = type('D', (object,), api.get_match_history(account_id=73853498, hero_id = self.fav_hero))()
         for match in match_hist.matches:
+            print "getting match detail"
             cur_match = type('D', (object,), api.get_match_details(match["match_id"]))()
             side = player_side(cur_match, self.id)
             if player_won(cur_match, side):
@@ -192,13 +196,5 @@ class player_data:
             if hero['id'] == self.fav_hero:
                 self.fav_hero_image = hero['url_full_portrait']
                 self.fav_hero_name = hero['localized_name']
-            elif hero['id'] == self.fav_hero_matchup.win_rates[0][0]:
-                self.hero_matchup_image[0] = hero['url_small_portrait']
-                self.hero_matchup_name[0] = hero['localized_name']
-            elif hero['id'] == self.fav_hero_matchup.win_rates[1][0]:
-                self.hero_matchup_image[1] = hero['url_small_portrait']
-                self.hero_matchup_name[1] = hero['localized_name']
-            elif hero['id'] == self.fav_hero_matchup.win_rates[2][0]:
-                self.hero_matchup_image[2] = hero['url_small_portrait']
-                self.hero_matchup_name[2] = hero['localized_name']
-        print self.hero_matchup_name
+                print self.fav_hero_image
+                return
