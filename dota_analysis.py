@@ -98,21 +98,25 @@ class player_data:
                 if "account_id" not in player: # some players do not have account id displayed publically
                     continue
                 if player["account_id"] == self.id: # if current player is our own player
-                    hero = hero_stats[player["hero_id"]]
-                    # increment hero frequency dictionary
-                    if player["hero_id"] in self.hero_freq:
-                        self.hero_freq[player["hero_id"]] += 1
-                    else:
-                        self.hero_freq[player["hero_id"]] = 1
-                    # adds current hero data as a part of playstyle analysis
-                    for (key, value) in hero.iteritems():
-                        if key == "id" or key == 'localized_name':
-                            continue
-                        if key in ["spell_caster", "right_clicker", "support"]:
-                            if value:
-                                self.profiletype[key] += 1
+                    hero_id = player["hero_id"]
+                    if hero_id in hero_stats: # if hero_id exists within our hero_stats table
+                        hero = hero_stats[hero_id]
+                        # increment hero frequency dictionary
+                        if hero_id in self.hero_freq:
+                            self.hero_freq[hero_id] += 1
                         else:
-                            self.profile[key] += (value * 100) / float(hero_stat_total[key])
+                            self.hero_freq[hero_id] = 1
+                        # adds current hero data as a part of playstyle analysis
+                        for (key, value) in hero.iteritems():
+                            if key == "id" or key == 'localized_name':
+                                continue
+                            if key in ["spell_caster", "right_clicker", "support"]:
+                                if value:
+                                    self.profiletype[key] += 1
+                            else:
+                                self.profile[key] += (value * 100) / float(hero_stat_total[key])
+                    break
+
 
     # overall function to calculate favourite hero, playstyle breakdown, synergy
     def calculate_profile(self):
@@ -198,3 +202,4 @@ class player_data:
                 self.fav_hero_name = hero['localized_name']
                 print self.fav_hero_image
                 return
+

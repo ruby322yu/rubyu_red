@@ -1677,6 +1677,23 @@ hero_stats = {
         "gank": 5,
         "mobile": 0
     },
+    108:{
+        "id": 108,
+        "localized_name": "Abyssal Underlord",
+        "spell_caster": False,
+        "right_clicker": False,
+        "support": True,
+        "initiate": 0,
+        "big_ult": 5,
+        "offlane": 2,
+        "tank": 4,
+        "heal": 0,
+        "push": 4,
+        "gank": 1,
+        "mobile": 0
+
+    },
+
     112: {
         "localized_name": "Winter Wyvern",
         "id": 112,

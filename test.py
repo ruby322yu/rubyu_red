@@ -1,4 +1,5 @@
 from dota_analysis import *
 
-player = player_data(api.get_player_summaries(73853498), 73853498)
+account_id =  44272179
+player = player_data(api.get_player_summaries(account_id), account_id)
 player.generate_statement()
