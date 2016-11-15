@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by TEMPLATED
+http://templated.co
+Released for free under the Creative Commons Attribution License
+
+Name       : EarthyBlue
+Description: A two-column, fixed-width design with dark color scheme.
+Version    : 1.0
+Released   : 20140215
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Ruby(u).Red - About me</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900|Quicksand:400,700|Questrial" rel="stylesheet" />
+<script src="https://use.fontawesome.com/2ab1e7374a.js"></script>
+<link href={{url_for('static', filename='default.css')}} rel="stylesheet" type="text/css" media="all" />
+<link href={{url_for('static', filename='fonts.css')}} rel="stylesheet" type="text/css" media="all" />
+
+<!--[if IE 6]><link href="default_ie6.css" rel="stylesheet" type="text/css" /><![endif]-->
+
+</head>
+<body>
+<div id="header-wrapper">
+	<div id="header" class="container">
+		<div id="logo">
+			<h1><a href="#">Ruby(u).Red</a></h1>
+			<div id="menu">
+				<ul>
+					<li><a href="/" accesskey="1" title="">Homepage</a></li>
+					<li class="active"><a href="/aboutme" accesskey="2" title="">About me</a></li>
+					<li><a href="/dotafyme" accesskey="3" title="">Dota-fy me!</a></li>
+					<li><a href="/myresume" accesskey="4" title="">My Resume</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+<div id="page-wrapper">
+	<div id="welcome" class="container">
+		{% if team %}
+            <h1>{{team.team_name}}</h1>
+            <h4>Current rank: {{team.rank}}</h4>
+            <h4>Current record: {{team.matches_won|string}}/{{team.total_matches|string}} match ups won</h4>
+            <h2>Players</h2>
+                <p>
+                    {% if team.captain_pos==1 %}<i class="fa fa-star fa-2x" aria-hidden="true"></i>{% endif %}
+                    <a href={{"http://www.dotabuff.com/players/"+team.player_dotaid1|string}}>{{team.player_name1}}</a>
+                </p>
+                <p>
+                    {% if team.captain_pos==2 %}<i class="fa fa-star fa-2x" aria-hidden="true"></i>{% endif %}
+                    <a href={{"http://www.dotabuff.com/players/"+team.player_dotaid2|string}}>{{team.player_name2}}</a></p>
+                <p>
+                    {% if team.captain_pos==3 %}<i class="fa fa-star fa-2x" aria-hidden="true"></i>{% endif %}
+                    <a href={{"http://www.dotabuff.com/players/"+team.player_dotaid3|string}}>{{team.player_name3}}</a></p>
+                <p>
+                    {% if team.captain_pos==4 %}<i class="fa fa-star fa-2x" aria-hidden="true"></i>{% endif %}
+                    <a href={{"http://www.dotabuff.com/players/"+team.player_dotaid4|string}}>{{team.player_name4}}</a></p>
+                <p>
+                    {% if team.captain_pos==5 %}<i class="fa fa-star fa-2x" aria-hidden="true"></i>{% endif %}
+                    <a href={{"http://www.dotabuff.com/players/"+team.player_dotaid5|string}}>{{team.player_name5}}</a></p>
+                {% if team.player_dotaid6 %}
+                <p><a href={{"http://www.dotabuff.com/players/"+team.player_dotaid6|string}}>{{team.player_name6}}</a></p>
+                {% endif %}
+
+        {% else %}
+            <h2>Oops, I don't think we have this team, maybe the link's broken, you should tell Ruby something's wrong</h2>
+        {% endif %}
+	</div>
+</div>
+
+<div id="copyright" class="container">
+	<p>&copy; <a href="/">Rubyu.Red.</a> All rights reserved. | CSS sourced from <a href="http://templated.co" rel="nofollow">TEMPLATED</a>.</p>
+		<ul class="contact">
+			<li><a href="https://steamcommunity.com/id/scar-l-et/" target="_blank"><i class="fa fa-steam-square fa-2x" aria-hidden="true"></i></a></li>
+			<li><a href="https://www.facebook.com/ruby.yu.1447" target="_blank"><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></a></li>
+			<li><a href="https://au.linkedin.com/in/ruby-yu-2783b1103" target="_blank"><i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i></a></li>
+			<li><a href="https://github.com/rubyvyu" target="_blank"><i class="fa fa-github fa-2x" aria-hidden="true"></i></a></li>
+			<li><a href="https://www.youtube.com/watch?v=1ECFzfGfIzU" target="_blank"><i class="fa fa-youtube-square fa-2x" aria-hidden="true"></i></a></li>
+		</ul>
+</div>
+</body>
+</html>
